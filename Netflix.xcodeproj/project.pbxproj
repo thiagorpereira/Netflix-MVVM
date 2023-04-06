@@ -19,6 +19,7 @@
 		B07E294329D5F2EF0025DE63 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07E294229D5F2EF0025DE63 /* DownloadsViewController.swift */; };
 		B087A78829DF1B8700DABE28 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087A78729DF1B8700DABE28 /* APICaller.swift */; };
 		B087A78A29DF45BE00DABE28 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087A78929DF45BE00DABE28 /* Movie.swift */; };
+		B087A78C29DF4DF900DABE28 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087A78B29DF4DF900DABE28 /* Extensions.swift */; };
 		B098220929DE496F0062AB5D /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098220829DE496F0062AB5D /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		B07E294229D5F2EF0025DE63 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		B087A78729DF1B8700DABE28 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B087A78929DF45BE00DABE28 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B087A78B29DF4DF900DABE28 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B098220829DE496F0062AB5D /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		B0387DD529DCFBAF00FDC21A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B087A78B29DF4DF900DABE28 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				B098220929DE496F0062AB5D /* HeroHeaderUIView.swift in Sources */,
 				B07E294329D5F2EF0025DE63 /* DownloadsViewController.swift in Sources */,
 				B07E292829D5EB430025DE63 /* AppDelegate.swift in Sources */,
+				B087A78C29DF4DF900DABE28 /* Extensions.swift in Sources */,
 				B07E292A29D5EB430025DE63 /* SceneDelegate.swift in Sources */,
 				B07E293F29D5F2990025DE63 /* UpcomingViewController.swift in Sources */,
 				B087A78A29DF45BE00DABE28 /* Movie.swift in Sources */,
