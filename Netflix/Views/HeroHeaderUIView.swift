@@ -31,7 +31,6 @@ class HeroHeaderUIView: UIView {
 
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = UIImage(named: "heroImage")
