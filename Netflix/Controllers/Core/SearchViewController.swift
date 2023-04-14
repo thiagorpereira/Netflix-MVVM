@@ -17,6 +17,13 @@ class SearchViewController: UIViewController {
         return table
     }()
     
+    private let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        controller.searchBar.placeholder = "Search for a Movie or Tv show"
+        controller.searchBar.searchBarStyle = .minimal
+        return controller
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +37,10 @@ class SearchViewController: UIViewController {
         discoverTable.delegate = self
         discoverTable.dataSource = self
         
+//        
+//        navigationController?.navigationBar.tintColor = .white
+        navigationItem.searchController = searchController
+        
         fetchDiscoverMovies()
     }
     
@@ -37,6 +48,7 @@ class SearchViewController: UIViewController {
         APICaller.shared.getDiscoverMovies { [weak self] result in
             switch result {
             case .success(let titles):
+                print(titles)
                 self?.titles = titles
                 DispatchQueue.main.async {
                     self?.discoverTable.reloadData()
