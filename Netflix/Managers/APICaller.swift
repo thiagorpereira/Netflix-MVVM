@@ -97,7 +97,6 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
                 completion(.success(results.results))
             } catch {
                 completion(.failure(APITError.failedToGetData))
@@ -114,9 +113,30 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
-                print(results)
                 completion(.success(results.results))
             } catch {
+                completion(.failure(APITError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
+    
+    func search(with query: String, completion: @escaping (Result<[Title], Error>) -> Void){
+        print("1")
+        
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
+        
+        guard let url = URL(string: "\(Constants.baseURL)/3/search/movie?api_key=\(Constants.API_KEY)&query=\(query)") else {return}
+        print("URL =>\(query)")
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data, error == nil else {return}
+            
+            do {
+                let results = try JSONDecoder().decode(TrendingTitleResponse.self, from: data)
+                print("search!!!\(results)")
+                completion(.success(results.results))
+            } catch {
+                print("apicaller")
                 completion(.failure(APITError.failedToGetData))
             }
         }

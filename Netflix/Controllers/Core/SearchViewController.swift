@@ -9,7 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    private var titles: [Title] = [Title]()
+    public var titles: [Title] = [Title]()
     
     private let discoverTable: UITableView = {
         let table = UITableView()
@@ -42,13 +42,14 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         
         fetchDiscoverMovies()
+        
+        searchController.searchResultsUpdater = self
     }
     
     private func fetchDiscoverMovies() {
         APICaller.shared.getDiscoverMovies { [weak self] result in
             switch result {
             case .success(let titles):
-                print(titles)
                 self?.titles = titles
                 DispatchQueue.main.async {
                     self?.discoverTable.reloadData()
@@ -87,4 +88,31 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        print("searchBar\(searchController.searchBar)")
+        
+        guard let query = searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              query.trimmingCharacters(in: .whitespaces).count >= 3,
+              let resultsController = searchController.searchResultsController as? SearchResultsViewController else {
+            return
+        }
+        
+        print ("query ----> \(query)")
+        APICaller.shared.search(with: query) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let titles):
+                    resultsController.titles = titles
+                    resultsController.searchResultsCollectionView.reloadData()
+                case .failure(let errors):
+                    print(errors.localizedDescription)
+                }
+            }
+        }
+    }
 }
