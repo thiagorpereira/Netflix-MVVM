@@ -24,7 +24,7 @@ class TitleTableViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.numberOfLines = 0
+        label.numberOfLines = 0
         return label
     }()
     private let titlePostUIImageView: UIImageView = {
@@ -54,12 +54,14 @@ class TitleTableViewCell: UITableViewCell {
         
         let titleLabelConstraint = [
             titleLabel.leadingAnchor.constraint(equalTo: titlePostUIImageView.trailingAnchor, constant: 20),
-            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: playTitleButton.leadingAnchor, constant: -5)
         ]
         
         let playTitleButtonConstraint = [
             playTitleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            playTitleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            playTitleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            playTitleButton.widthAnchor.constraint(equalToConstant: 35)
         ]
         
         NSLayoutConstraint.activate(titlePostUIImageViewConstraint)
