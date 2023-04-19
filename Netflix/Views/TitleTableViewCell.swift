@@ -24,7 +24,7 @@ class TitleTableViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "ueeeee"
+//        label.numberOfLines = 0
         return label
     }()
     private let titlePostUIImageView: UIImageView = {
