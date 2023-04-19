@@ -192,6 +192,4 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
 }
