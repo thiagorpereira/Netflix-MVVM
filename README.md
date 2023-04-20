@@ -30,32 +30,32 @@
 
 
 
-<h3 align="center">
+<p align="center">
   <b>Home & Movie Detail:</b> Consuming <a href="https://www.themoviedb.org/settings/api">The Movie Database API</a> to fetch each differents list of movies and load in each corresponding cell and consuming <a href="https://developers.google.com/youtube/v3">YouTube API</a> passing title movie in the query + "Trailer", get the first one and load the video in a Web View using <a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebView</a> 
-<h3>
+<p>
 <h1 align="center">
      <img alt="D" title="Netflix" src="Documentation/movieDetailAndWebView.gif" width="300px" />
 </h1>
 
 
-<h3 align="center">
+<p align="center">
 <b>Search:</b> Consuming <a href="https://www.themoviedb.org/settings/api">The Movie Database API</a> to fetch a search query and load results in a UICollectionView
-<h3>
+<p>
 <h1 align="center">
   <img alt="D" title="Netflix" src="Documentation/search.gif" width="300px" />
 </h1>
 
   
-<h3 align="center">
+<p align="center">
 <b>Download:</b> Using <a href="https://developer.apple.com/documentation/coredata">Core Data</a> to persist downloads even if the app closes and reopens
-<h3>
+<p>
 <h1 align="center">
       <img alt="D" title="Netflix" src="Documentation/downloadCoreData.gif" width="300px" />
 </h1>
 
-<h3 align="center">
+<p align="center">
 <b>Upcoming and Delete:</b> Fetching upcoming movies in <a href="https://www.themoviedb.org/settings/api">The Movie Database API</a> and load in a UITableView and deleting movie that was saved in a <a href="https://developer.apple.com/documentation/coredata">Core Data</a> storage 
-<h3>
+<p>
 <h1 align="center">
      <img alt="D" title="Netflix" src="Documentation/upComingAndDelete.gif" width="300px" />
 </h1>
