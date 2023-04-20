@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00D0B6629F0E01A00C83446 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D0B6529F0E01A00C83446 /* DataPersistenceManager.swift */; };
+		B0216A6329F0DDC800875458 /* NetflixModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0216A6129F0DDC800875458 /* NetflixModel.xcdatamodeld */; };
 		B0387DD829DCFC7400FDC21A /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387DD729DCFC7400FDC21A /* CollectionViewTableViewCell.swift */; };
 		B07E292829D5EB430025DE63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07E292729D5EB430025DE63 /* AppDelegate.swift */; };
 		B07E292A29D5EB430025DE63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07E292929D5EB430025DE63 /* SceneDelegate.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B00D0B6529F0E01A00C83446 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		B0216A6229F0DDC800875458 /* NetflixModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetflixModel.xcdatamodel; sourceTree = "<group>"; };
 		B0387DD729DCFC7400FDC21A /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		B07E292429D5EB430025DE63 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07E292729D5EB430025DE63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B087A78729DF1B8700DABE28 /* APICaller.swift */,
+				B00D0B6529F0E01A00C83446 /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				B07E293029D5EB430025DE63 /* Assets.xcassets */,
 				B07E293229D5EB430025DE63 /* LaunchScreen.storyboard */,
 				B07E293529D5EB430025DE63 /* Info.plist */,
+				B0216A6129F0DDC800875458 /* NetflixModel.xcdatamodeld */,
 			);
 			path = Netflix;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 				B0F9BDC629E5F6D000E53197 /* TitleTableViewCell.swift in Sources */,
 				B07E294129D5F2C80025DE63 /* SearchViewController.swift in Sources */,
 				B087A79029E45E7200DABE28 /* TitleCollectionViewCell.swift in Sources */,
+				B00D0B6629F0E01A00C83446 /* DataPersistenceManager.swift in Sources */,
 				B07E292C29D5EB430025DE63 /* MainTabBarViewController.swift in Sources */,
 				B0387DD829DCFC7400FDC21A /* CollectionViewTableViewCell.swift in Sources */,
 				B087A78829DF1B8700DABE28 /* APICaller.swift in Sources */,
@@ -273,6 +280,7 @@
 				B0DDDB2E29EF935D00E38C4F /* TitlePreviewViewModel.swift in Sources */,
 				B07E293F29D5F2990025DE63 /* UpcomingViewController.swift in Sources */,
 				B0DDDB2C29EF2D9500E38C4F /* TitlePreviewViewController.swift in Sources */,
+				B0216A6329F0DDC800875458 /* NetflixModel.xcdatamodeld in Sources */,
 				B087A78A29DF45BE00DABE28 /* Title.swift in Sources */,
 				B07E293D29D5F1C60025DE63 /* HomeViewController.swift in Sources */,
 				B0C3DB6929E73FB100ED5200 /* TitleViewModel.swift in Sources */,
@@ -507,6 +515,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B0216A6129F0DDC800875458 /* NetflixModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0216A6229F0DDC800875458 /* NetflixModel.xcdatamodel */,
+			);
+			currentVersion = B0216A6229F0DDC800875458 /* NetflixModel.xcdatamodel */;
+			path = NetflixModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B07E291C29D5EB430025DE63 /* Project object */;
 }
