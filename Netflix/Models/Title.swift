@@ -19,7 +19,7 @@ struct Title : Codable{
     let poster_path: String?
     let overview: String?
     let vote_count: Int
-    let release_data: String?
+    let release_date: String?
     let vote_average: Double
 }
 /*
